@@ -24,7 +24,7 @@ export default function Player() {
         if (!audio || !currentSong?.id) return
 
         audio.pause()
-        audio.src = `http://localhost:8080/api/songs/stream/${currentSong.id}`
+        audio.src = `${import.meta.env.VITE_API_URL}/songs/stream/${currentSong.id}`
         audio.load()
         audio.play().catch(() => {})
         addToHistory(currentSong.id)
