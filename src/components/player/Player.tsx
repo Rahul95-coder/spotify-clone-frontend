@@ -7,7 +7,7 @@ import QueuePanel from "./QueuePanel"
 
 export default function Player() {
 
-    const audioRef = useRef<HTMLAudioElement>(null)
+    const audioRef = useRef<HTMLAudioElement | null>(null)
 
     const currentSong = usePlayerStore(s => s.currentSong)
     const isPlaying   = usePlayerStore(s => s.isPlaying)

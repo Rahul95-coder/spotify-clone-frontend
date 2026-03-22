@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import * as React from "react";
 
 interface Props {
-    audioRef: React.RefObject<HTMLAudioElement>
+    audioRef: React.RefObject<HTMLAudioElement | null>
 }
 
 export default function ProgressBar({ audioRef }: Props) {
