@@ -13,11 +13,11 @@ export default function LikedSongs() {
         const load = async () => {
             try {
                 const userId = localStorage.getItem("userId")
-                const token = localStorage.getItem("token")
+                // const token = localStorage.getItem("token")
 
                 // CHANGED: log both so you can see exactly what's missing
-                console.log("userId:", userId)
-                console.log("token:", token ? "EXISTS" : "MISSING")
+                // console.log("userId:", userId)
+                // console.log("token:", token ? "EXISTS" : "MISSING")
 
                 if (!userId) {
                     setError("No userId in localStorage — are you logged in?")
@@ -27,7 +27,7 @@ export default function LikedSongs() {
                 const data = await getLikedSongs(userId)
 
                 // CHANGED: log raw response so you can see what backend actually returns
-                console.log("liked songs raw response:", data)
+                // console.log("liked songs raw response:", data)
 
                 setSongs(data)
                 setLikedSongs(data.map((song: Song) => song.id))
