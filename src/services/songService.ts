@@ -2,7 +2,7 @@ import api from "../services/api"
 
 export const getSongs = async () => {
 
-    const response = await api.get("/songs")
+    const response = await api.get("/songs?size=100")
 
     return response.data.songs
 }

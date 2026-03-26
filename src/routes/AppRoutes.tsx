@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "../pages/Home"
 import Login from "../pages/Login"
 import Search from "../pages/Search"
-import Playlist from "../pages/Playlist"
+import Playlist from "../pages/PlaylistPage.tsx"
 import Library from "../pages/Library"  // ADDED
 
 import ProtectedRoute from "./ProtectedRoute"
