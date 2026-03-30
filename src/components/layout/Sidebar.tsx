@@ -53,8 +53,6 @@ export default function Sidebar() {
                 {navLink("/history", "🕐  Recently Played")}
             </div>
 
-            {/*/!* SPACER *!/*/}
-            {/*<div className="flex-1" />*/}
 
             {/* ADMIN */}
             {user?.role === "ROLE_ADMIN" && (
